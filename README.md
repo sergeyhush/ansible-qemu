@@ -1,6 +1,8 @@
 QEMU
 =========
 
+[![Build Status](https://travis-ci.org/sergeyhush/ansible-qemu.svg?branch=master)](https://travis-ci.org/sergeyhush/ansible-qemu)
+
 A brief description of the role goes here.
 
 Requirements
