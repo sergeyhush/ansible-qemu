@@ -4,9 +4,9 @@ galaxy_info:
   license: BSD
   min_ansible_version: 1.9
   platforms:
-    - name: Debian
-      - jessie
-      - wheezy
+  - name: Debian
+    - jessie
+    - wheezy
   galaxy_tags: 
     - system
 dependencies: []
