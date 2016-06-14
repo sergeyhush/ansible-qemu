@@ -1,0 +1,12 @@
+galaxy_info:
+  author: Sergey Sudakovich
+  description: Install QEMU from source (or apt)
+  license: BSD
+  min_ansible_version: 1.9
+  platforms:
+    - name: Debian
+      - jessie
+      - wheezy
+  galaxy_tags: 
+    - system
+dependencies: []

@@ -1,0 +1,10 @@
+# tasks file for ansible-qemu
+# For Linux see http://qemu-project.org/Hosts/Linux
+---
+- include: build_from_source.yml
+  when: build_from_source
+
+- name: Install from repo
+  apt: pkg="qemu-kvm={{ version }}" state=present
+  when: not build_from_source
+        

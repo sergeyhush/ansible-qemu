@@ -1,0 +1,16 @@
+---
+build_from_source: true
+repo: "git://git.qemu-project.org/qemu.git"
+version: v2.5.1.1
+tmp_dir: "/tmp/qemu-{{ version }}-src"
+recommended_pkgs:
+  - git
+  - libglib2.0-dev
+  - libfdt-dev
+  - libpixman-1-dev
+  - zlib1g-dev
+build_commands:
+  - "./configure --enable-debug"
+  - "make -j24"
+  - "make install"
+

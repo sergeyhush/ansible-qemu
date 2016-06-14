@@ -1,0 +1,22 @@
+---
+- name: install recommended packages
+  apt: pkg={{ item }} state=present
+  with_items: "{{ recommended_pkgs }}"
+
+- name: download source code
+  git:
+    repo: "{{ repo }}"
+    dest: "{{ tmp_dir }}"
+    version: "{{ version }}"
+    force: yes
+    accept_hostkey: yes
+
+- name: build and install
+  command: "{{ item }}"
+  with_items: "{{ build_commands }}"
+  args:
+    chdir: "{{ tmp_dir }}"
+
+- name: cleanup
+  file: path={{ tmp_dir }} state=absent
+
